@@ -9,7 +9,7 @@ module.exports = {
 	devtool: 'module-source-map',
 
 	output: {
-		filename: './dist/react-quill.min.js',
+		filename: './dist/DocEditor.min.js',
 		library: 'ReactQuill',
 		libraryTarget: 'umd'
 	},

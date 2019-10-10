@@ -48,14 +48,14 @@ var QuillComponent = createClass({
 			) return new Error(
 				'Since v1.0.0, React Quill will not create a custom toolbar for you ' +
 				'anymore. Create a toolbar explictly, or let Quill create one. ' +
-				'See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100'
+				'See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100'
 			);
 		},
 
 		toolbar: function(props) {
 			if ('toolbar' in props) return new Error(
 				'The `toolbar` prop has been deprecated. Use `modules.toolbar` instead. ' +
-				'See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100'
+				'See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100'
 			);
 		},
 
@@ -64,14 +64,14 @@ var QuillComponent = createClass({
 
 			if (isNotArrayOfString) return new Error(
 				'You cannot specify custom `formats` anymore. Use Parchment instead.  ' +
-				'See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100.'
+				'See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100.'
 			);
 		},
 
 		styles: function(props) {
 			if ('styles' in props) return new Error(
 				'The `styles` prop has been deprecated. Use custom stylesheets instead. ' +
-				'See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100.'
+				'See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100.'
 			);
 		},
 
@@ -79,7 +79,7 @@ var QuillComponent = createClass({
 			if ('pollInterval' in props) return new Error(
 				'The `pollInterval` property does not have any effect anymore. ' +
 				'You can safely remove it from your props.' +
-				'See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100.'
+				'See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100.'
 			);
 		},
 
@@ -169,7 +169,7 @@ var QuillComponent = createClass({
 			if (nextContents === this.lastDeltaChangeSet) throw new Error(
 				'You are passing the `delta` object from the `onChange` event back ' +
 				'as `value`. You most probably want `editor.getContents()` instead. ' +
-				'See: https://github.com/zenoamaro/react-quill#using-deltas'
+				'See: https://github.com/ydornala/DocEditor#using-deltas'
 			);
 
 			// NOTE: Seeing that Quill is missing a way to prevent

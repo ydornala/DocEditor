@@ -11,10 +11,10 @@ https://codepen.io/pen?template=xgyOXQ
 See the [instance methods] and [API] documentation.
 
 [instance methods]:
-https://github.com/zenoamaro/react-quill#methods
+https://github.com/ydornala/DocEditor#methods
 
 [API]:
-https://github.com/zenoamaro/react-quill#api-reference
+https://github.com/ydornala/DocEditor#api-reference
 
 **Is there a bug in Quill?**
 Please refer to the [Quill issues page].
@@ -22,7 +22,7 @@ Please refer to the [Quill issues page].
 [Quill issues page]: 
 https://github.com/quilljs/quill/issues
 
-#### React-Quill version 
+#### DocEditor version 
 - [ ] master
 - [ ] 0.4.1
 - [ ] 1.0.0-beta-1

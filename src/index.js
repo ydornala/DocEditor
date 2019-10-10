@@ -1,6 +1,6 @@
 /*
-React-Quill v1.0.0
-https://github.com/zenoamaro/react-quill
+DocEditor v1.0.0
+https://github.com/ydornala/DocEditor
 */
 var Quill = require('quill');
 var Component = require('./component');

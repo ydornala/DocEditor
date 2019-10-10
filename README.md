@@ -1,5 +1,5 @@
-React-Quill [![Build Status](https://travis-ci.org/zenoamaro/react-quill.svg?branch=master)](https://travis-ci.org/zenoamaro/react-quill) [![npm](https://img.shields.io/npm/v/react-quill.svg)](https://www.npmjs.com/package/react-quill)
-[![npm downloads](https://img.shields.io/npm/dt/react-quill.svg?maxAge=2592000)](http://www.npmtrends.com/react-quill)
+DocEditor [![Build Status](https://travis-ci.org/ydornala/DocEditor.svg?branch=master)](https://travis-ci.org/ydornala/DocEditor) [![npm](https://img.shields.io/npm/v/DocEditor.svg)](https://www.npmjs.com/package/DocEditor)
+[![npm downloads](https://img.shields.io/npm/dt/DocEditor.svg?maxAge=2592000)](http://www.npmtrends.com/DocEditor)
 ==============================================================================
 
 A [Quill] component for [React].
@@ -8,7 +8,7 @@ See a [live demo] or [Codepen](http://codepen.io/alexkrolick/pen/xgyOXQ/left?edi
 
 [Quill]: https://quilljs.com
 [React]: https://facebook.github.io/react/
-[live demo]: https://zenoamaro.github.io/react-quill/
+[live demo]: https://ydornala.github.io/DocEditor/
 
 1. [Quick start](#quick-start)
    1. [Import the component](#import-the-component)
@@ -22,7 +22,7 @@ See a [live demo] or [Codepen](http://codepen.io/alexkrolick/pen/xgyOXQ/left?edi
    1. [Custom Formats](#custom-formats)
    1. [Custom Editing Area](#custom-editing-area)
    1. [Mixin](#mixin)
-1. [Upgrading to React-Quill v1.0.0](#upgrading-to-react-quill-v100)
+1. [Upgrading to DocEditor v1.0.0](#upgrading-to-DocEditor-v100)
 1. [API reference](#api-reference)
    1. [Exports](#exports)
    1. [Props](#props)
@@ -37,13 +37,13 @@ See a [live demo] or [Codepen](http://codepen.io/alexkrolick/pen/xgyOXQ/left?edi
 ---
 
 💯 **React Quill now supports Quill v1.0.0!**
-Thanks to @clemmy and @alexkrolick for landing this much-awaited change. There are many breaking changes, so be sure to read the [migration guide](#upgrading-to-react-quill-v100).
+Thanks to @clemmy and @alexkrolick for landing this much-awaited change. There are many breaking changes, so be sure to read the [migration guide](#upgrading-to-DocEditor-v100).
 
 ---
 
 ```sh
-npm install react-quill
-yarn add react-quill
+npm install DocEditor
+yarn add DocEditor
 ```
 
 Special thank you to everyone who contributed during the 1.0.0 release cycle!
@@ -53,9 +53,9 @@ Special thank you to everyone who contributed during the 1.0.0 release cycle!
 ### Import the component
 
 ```jsx
-import ReactQuill from 'react-quill'; // ES6
-import * as ReactQuill from 'react-quill'; // Typescript
-const ReactQuill = require('react-quill'); // CommonJS
+import ReactQuill from 'DocEditor'; // ES6
+import * as ReactQuill from 'DocEditor'; // Typescript
+const ReactQuill = require('DocEditor'); // CommonJS
 ```
 
 ### Import the stylesheet
@@ -71,8 +71,8 @@ _Two common examples are shown below. How stylesheets are included in your app d
 #### Using `css-loader` with Webpack or `create-react-app`
 
 ```jsx
-require('react-quill/dist/quill.snow.css'); // CommonJS
-import 'react-quill/dist/quill.snow.css'; // ES6
+require('DocEditor/dist/quill.snow.css'); // CommonJS
+import 'DocEditor/dist/quill.snow.css'; // ES6
 ```
 
 ### Use the component
@@ -131,9 +131,9 @@ These stylesheets can be found in the Quill distribution, but for convenience th
 And then link the appropriate stylesheet (only link the CSS for the themes you want to use):
 
 ```html
-<link rel="stylesheet" href="node_modules/react-quill/dist/quill.snow.css">
-<link rel="stylesheet" href="node_modules/react-quill/dist/quill.bubble.css">
-<link rel="stylesheet" href="node_modules/react-quill/dist/quill.core.css">
+<link rel="stylesheet" href="node_modules/DocEditor/dist/quill.snow.css">
+<link rel="stylesheet" href="node_modules/DocEditor/dist/quill.bubble.css">
+<link rel="stylesheet" href="node_modules/DocEditor/dist/quill.core.css">
 ```
 
 This may vary depending how application is structured, directories or otherwise. For example, if you use a CSS pre-processor like SASS, you may want to import that stylesheet inside your own.
@@ -324,8 +324,8 @@ The component has two types of formats:
 <summary>Example Code</summary>
 
 ```js
-const ReactQuill = require('react-quill'); // CommonJS
-import ReactQuill, { Quill } from 'react-quill'; // ES6
+const ReactQuill = require('DocEditor'); // CommonJS
+import ReactQuill, { Quill } from 'DocEditor'; // ES6
 ```
 
 
@@ -374,7 +374,7 @@ class MyComponent extends React.Component {
 
 If you instantiate ReactQuill without children, it will create a `<div>` for you, to be used as the editing area for Quill. If you prefer, you can specify your own element for ReactQuill to use. Note that `<textarea>`s are not supported by Quill at this time.
 
-Note: Custom editing areas lose focus when using React 16 as a peer dep at this time ([bug](https://github.com/zenoamaro/react-quill/issues/309)).
+Note: Custom editing areas lose focus when using React 16 as a peer dep at this time ([bug](https://github.com/ydornala/DocEditor/issues/309)).
 
 <details>
 
@@ -404,7 +404,7 @@ The module exports a mixin which can be used to create custom editor components.
 The ReactQuill default component is built using the mixin. See [component.js](src/component.js) for source.
 
 ```jsx
-import {Mixin} from 'react-quill'
+import {Mixin} from 'DocEditor'
 
 var MyComponent = React.createClass({
   mixins: [ ReactQuill.Mixin ],
@@ -428,7 +428,7 @@ var MyComponent = React.createClass({
 
 </details>
 
-## Upgrading to React-Quill v1.0.0
+## Upgrading to DocEditor v1.0.0
 
 In most cases, ReactQuill will raise useful warnings to help you perform any necessary migration steps.
 
@@ -537,17 +537,17 @@ This property previously set the frequency with which Quill polled the DOM for c
 ### Exports
 
 ```jsx
-const ReactQuill = require('react-quill'); // CommonJS
+const ReactQuill = require('DocEditor'); // CommonJS
 const {Quill, Mixin, Toolbar} = ReactQuill;
 
-import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill'; // ES6
+import ReactQuill, { Quill, Mixin, Toolbar } from 'DocEditor'; // ES6
 ```
 
 `Mixin`
 : Provides the bridge between React and Quill. `ReactQuill` implements this mixin; in the same way you can use it to build your own component, or replace it to implement a new core for the default component. _Note that mixins are deprecated in React and this export will be replaced by an HOC in the future._
 
 `Toolbar`
-: The component that renders the custom ReactQuill toolbar. The default collection of items and color swatches is available as `ReactQuill.Toolbar.defaultItems` and `ReactQuill.Toolbar.defaultColors` respectively. ⚠️ The Toolbar component is deprecated since v1.0.0. See [upgrading to React Quill v1.0.0](#upgrading-to-react-quill-v100).
+: The component that renders the custom ReactQuill toolbar. The default collection of items and color swatches is available as `ReactQuill.Toolbar.defaultItems` and `ReactQuill.Toolbar.defaultColors` respectively. ⚠️ The Toolbar component is deprecated since v1.0.0. See [upgrading to React Quill v1.0.0](#upgrading-to-DocEditor-v100).
 
 `Quill`
 : The `Quill` namespace on which you can call `registerModule` and such.
@@ -574,7 +574,7 @@ import ReactQuill, { Quill, Mixin, Toolbar } from 'react-quill'; // ES6
 : If true, the editor won't allow changing its contents. Wraps the Quill [`disable` API](https://quilljs.com/docs/api/#enable).
 
 `placeholder`
-: The default value for the empty editor. Note: The Quill API does not support changing this value dynamically. Use refs and data-attributes instead (see [#340](https://github.com/zenoamaro/react-quill/issues/340#issuecomment-376176878)).
+: The default value for the empty editor. Note: The Quill API does not support changing this value dynamically. Use refs and data-attributes instead (see [#340](https://github.com/ydornala/DocEditor/issues/340#issuecomment-376176878)).
 
 `modules`
 : An object specifying which modules are enabled, and their configuration. The editor toolbar is a commonly customized module. See the [modules section](http://quilljs.com/docs/modules/) over the Quill documentation for more information on what modules are available.
@@ -747,17 +747,17 @@ More tasks are available on the [Makefile](Makefile):
     test: lint, spec and coverage threshold test
     build: builds the minified version
 
-Note that `dist` is ignored in the git repository as of version 1.0.0. If you need to use the built files without downloading the package from NPM, you can run the build tasks yourself or use a CDN like [unpkg](https://unpkg.com/react-quill@1.0.0-beta-1/dist/react-quill.min.js).
+Note that `dist` is ignored in the git repository as of version 1.0.0. If you need to use the built files without downloading the package from NPM, you can run the build tasks yourself or use a CDN like [unpkg](https://unpkg.com/DocEditor@1.0.0-beta-1/dist/DocEditor.min.js).
 
 ### Bundling with Webpack
 
 Quill ships only a pre-built javascript file, so Webpack will complain after building a bundle:
 
 ```
-Error: ./~/react-quill/~/quill/dist/quill.js
+Error: ./~/DocEditor/~/quill/dist/quill.js
 Critical dependencies:
 6:478-485 This seems to be a pre-built javascript file. Though this is possible, it's not recommended. Try to require the original source to get better results.
-@ ./~/react-quill/~/quill/dist/quill.js 6:478-485
+@ ./~/DocEditor/~/quill/dist/quill.js 6:478-485
 ```
 
 The warning is harmless, but if you want to silence it you can avoid parsing Quill by adding this to your Webpack configuration:
@@ -770,7 +770,7 @@ module: {
 }
 ```
 
-See [#7](https://github.com/zenoamaro/react-quill/issues/7) for more details.
+See [#7](https://github.com/ydornala/DocEditor/issues/7) for more details.
 
 ## Browser support
 
@@ -783,7 +783,7 @@ Please check the browser support table for the upstream [Quill](https://github.c
 ## Contributors
 
 React Quill would not be where it is today without the contributions of many people, which we are incredibly grateful for:
-- @zenoamaro (maintainer)
+- @ydornala (maintainer)
 - @alexkrolick (maintainer)
 - @clemmy
 - @asiniy
@@ -821,7 +821,7 @@ React Quill would not be where it is today without the contributions of many peo
 
 The MIT License (MIT)
 
-Copyright (c) 2016, zenoamaro <zenoamaro@gmail.com>
+Copyright (c) 2016, ydornala <ydornala@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

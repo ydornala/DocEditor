@@ -54,13 +54,13 @@ declare namespace ReactQuill {
 
 		/** @deprecated
 		 * The `toolbar` prop has been deprecated. Use `modules.toolbar` instead.
-		 * See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100.
+		 * See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100.
 		 * */
 
 		toolbar?: never;
 		/** @deprecated
 		 * The `styles` prop has been deprecated. Use custom stylesheets instead.
-		 * See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100
+		 * See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100
 		 */
 
 		styles?: never;
@@ -68,7 +68,7 @@ declare namespace ReactQuill {
 		 * @deprecated
 		 * The `pollInterval` property does not have any effect anymore.
 		 * You can safely remove it from your props.
-		 * See: https://github.com/zenoamaro/react-quill#upgrading-to-react-quill-v100.
+		 * See: https://github.com/ydornala/DocEditor#upgrading-to-DocEditor-v100.
 		 */
 		pollInterval?: never;
 	}

@@ -16,5 +16,5 @@
 /lib
 
 # Packaging artifacts
-/react-quill-*.tgz
+/DocEditor-*.tgz
 /package
